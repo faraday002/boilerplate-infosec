@@ -48,7 +48,6 @@ const helmet = require('helmet');
 
 
 
-module.exports = app;
 const api = require('./server.js');
 app.use(helmet.hidePoweredBy());
 app.use(express.static('public'));
@@ -61,3 +60,5 @@ let port = process.env.PORT || 5000;
 app.listen(port, '0.0.0.0', () => {
   console.log(`Your app is listening on port ${port}`);
 });
+
+module.exports = app;
